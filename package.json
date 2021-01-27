@@ -1,15 +1,26 @@
 {
-  "name": "newproject",
+  "name": "nodejs",
   "version": "1.0.0",
-  "description": "new project build",
+  "description": "nodejs ci/cd deployment",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./test/* --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3r1ckc00l/nodejs.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3r1ckc00l/nodejs/issues"
+  },
+  "homepage": "https://github.com/3r1ckc00l/nodejs#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "twilio": "^3.54.1"
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "mocha": "^8.2.1",
+    "supertest": "^6.1.3"
   }
 }

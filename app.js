@@ -1,14 +1,15 @@
-const http = require('http');
+// importing express framework
+const express = require("express");
+const app = express();
 
-const hostname = '127.0.0.1';
-const port = 3000;
-
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
+// Respond with "hello world" for requests that hit our root "/"
+app.get("/", function (req, res) {
+ return res.send("Hello World");
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+// listen to port 3000 by default
+app.listen(process.env.PORT || 3000, () => {
+  console.log("Server is running");
 });
+
+module.exports = app;
